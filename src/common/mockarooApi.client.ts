@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { MachineDTO } from './machine/dto/machine.dto';
-import { ProductionDTO } from './production/dto/production.dto';
+import { MachineDTO } from '../modules/machine/machine.dto';
+import { ProductionDTO } from '../modules/production/production.dto';
 
 const API_KEY = 'feebcda0';
 

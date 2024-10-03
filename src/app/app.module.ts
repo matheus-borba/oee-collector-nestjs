@@ -1,14 +1,14 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { SyncController } from './api.controller';
+import { SyncController } from '../common/sync.controller';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MachineModule } from './machine/machine.module';
-import { ApiService } from './services/api.service';
-import { ProductionModule } from './production/production.module';
-import { OEECalculationService } from './services/oee-calculation.service';
-import { MachineController } from './controllers/machine.controller';
-import { ProductionController } from './controllers/production.controller';
+import { MachineModule } from '../modules/machine/machine.module';
+import { ApiService } from '../common/api.service';
+import { ProductionModule } from '../modules/production/production.module';
+import { OEECalculationService } from '../common/oee-calculation.service';
+import { MachineController } from '../modules/machine/machine.controller';
+import { ProductionController } from '../modules/production/production.controller';
 
 @Module({
   imports: [
@@ -19,7 +19,7 @@ import { ProductionController } from './controllers/production.controller';
       username: 'postgres',
       password: 'postgres',
       database: 'oee-data-collector',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      entities: [__dirname + '/../**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
     MachineModule,

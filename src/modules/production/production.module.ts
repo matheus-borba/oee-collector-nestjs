@@ -1,9 +1,9 @@
 import { forwardRef, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Production } from './model/production.entity';
+import { Production } from './production.entity';
 import { ProductionRepository } from './production.repository';
-import { ApiService } from 'src/services/api.service';
-import { MachineModule } from 'src/machine/machine.module';
+import { ApiService } from 'src/common/api.service';
+import { MachineModule } from '../machine/machine.module';
 
 @Module({
   imports: [

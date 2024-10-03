@@ -1,4 +1,4 @@
-import { Production } from 'src/production/model/production.entity';
+import { Production } from '../production/production.entity';
 import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 
 @Entity('machine')

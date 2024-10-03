@@ -1,5 +1,5 @@
 import { IsNumber, IsOptional, IsString } from 'class-validator';
-import { Production } from '../model/production.entity';
+import { Production } from './production.entity';
 
 export class ProductionDTO {
   @IsNumber()

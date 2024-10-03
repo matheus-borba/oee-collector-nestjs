@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
-import { ApiService } from './services/api.service';
-import { OEECalculationService } from './services/oee-calculation.service';
+import { ApiService } from './api.service';
+import { OEECalculationService } from './oee-calculation.service';
 
 @Controller('api')
 export class SyncController {
@@ -14,14 +14,14 @@ export class SyncController {
   }
 
   @Get('sync')
-  async syncMachines(): Promise<string> {
+  async syncMachines(): Promise<{ message: string }> {
     await this.apiService.synchronizeAllMachines();
-    await this.delay(2000);
+    await this.delay(1000);
     await this.apiService.synchronizeAllProductions();
-    await this.delay(2000);
+    await this.delay(1000);
     await this.oeeCalculationService.calculateForProduction();
-    await this.delay(2000);
+    await this.delay(1000);
     await this.oeeCalculationService.calculateForMachine();
-    return 'synchronize successfully!';
+    return { message: 'synchronize successfully!' };
   }
 }

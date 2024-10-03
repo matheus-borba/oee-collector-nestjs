@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Res } from '@nestjs/common';
 import { Response } from 'express';
-import { ProductionDTO } from '../production/dto/production.dto';
-import { ProductionRepository } from '../production/production.repository';
+import { ProductionDTO } from './production.dto';
+import { ProductionRepository } from './production.repository';
 
 @Controller('api/production')
 export class ProductionController {

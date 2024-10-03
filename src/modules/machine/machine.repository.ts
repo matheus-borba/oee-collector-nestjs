@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { MachineDTO } from './dto/machine.dto';
-import { Machine } from './model/machine.entity';
+import { MachineDTO } from './machine.dto';
+import { Machine } from './machine.entity';
 
 @Injectable()
 export class MachineRepository {

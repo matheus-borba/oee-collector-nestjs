@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { ProductionRepository } from '../production/production.repository';
-import { MachineRepository } from '../machine/machine.repository';
-import { ProductionDTO } from '../production/dto/production.dto';
-import { MachineDTO } from '../machine/dto/machine.dto';
-import { Machine } from '../machine/model/machine.entity';
-import { Production } from '../production/model/production.entity';
+import { ProductionRepository } from '../modules/production/production.repository';
+import { MachineRepository } from '../modules/machine/machine.repository';
+import { ProductionDTO } from '../modules/production/production.dto';
+import { MachineDTO } from '../modules/machine/machine.dto';
+import { Machine } from '../modules/machine/machine.entity';
+import { Production } from '../modules/production/production.entity';
 
 @Injectable()
 export class OEECalculationService {

@@ -1,6 +1,6 @@
 import { Expose } from 'class-transformer';
 import { IsNumber, IsOptional, IsString } from 'class-validator';
-import { Machine } from '../model/machine.entity';
+import { Machine } from './machine.entity';
 
 export class MachineDTO {
   @Expose({ name: 'id' })

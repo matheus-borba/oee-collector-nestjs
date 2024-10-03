@@ -1,6 +1,6 @@
 import { Controller, Get, Param, Res } from '@nestjs/common';
-import { MachineDTO } from '../machine/dto/machine.dto'; // Ajuste conforme a localização real do DTO
-import { MachineRepository } from '../machine/machine.repository'; // Ajuste conforme a localização real do repositório
+import { MachineDTO } from './machine.dto';
+import { MachineRepository } from './machine.repository';
 import { Response } from 'express';
 
 @Controller('api/machine')

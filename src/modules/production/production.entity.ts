@@ -5,7 +5,7 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Machine } from '../../machine/model/machine.entity';
+import { Machine } from '../machine/machine.entity';
 
 @Entity('production')
 export class Production {

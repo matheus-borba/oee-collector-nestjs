@@ -1,9 +1,9 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { Production } from './model/production.entity';
-import { MachineRepository } from 'src/machine/machine.repository';
+import { Production } from './production.entity';
+import { MachineRepository } from '../machine/machine.repository';
 import { Repository } from 'typeorm';
-import { ProductionDTO } from './dto/production.dto';
-import { Machine } from 'src/machine/model/machine.entity';
+import { ProductionDTO } from './production.dto';
+import { Machine } from '../machine/machine.entity';
 
 export class ProductionRepository {
   constructor(

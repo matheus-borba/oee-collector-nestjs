@@ -1,8 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import {
-  getAllMachines,
-  getAllProductions,
-} from '../common/mockarooApi.client';
+import { getAllMachines, getAllProductions } from './mockarooApi.client';
 import { MachineDTO } from '../modules/machine/machine.dto';
 import { MachineRepository } from '../modules/machine/machine.repository';
 import { ProductionDTO } from '../modules/production/production.dto';
