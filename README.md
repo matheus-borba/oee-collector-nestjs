@@ -32,6 +32,12 @@
 $ npm install
 ```
 
+## Run Docker
+
+```bash
+$ docker-compose up
+```
+
 ## Compile and run the project
 
 ```bash
